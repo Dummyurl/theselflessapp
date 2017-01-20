@@ -36,7 +36,6 @@ import com.theselflessapp.modal.SignUpPOJO;
 import com.theselflessapp.prefrence.Preference;
 import com.theselflessapp.utility.Utilities;
 
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,9 +50,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by Sony on 10/9/2016.
- */
+
 public class RegistrationActivity extends AppCompatActivity implements Constant, View.OnClickListener,
         TextWatcher, Callback<SignUpPOJO> {
     private EditText edt_user_name;
@@ -327,7 +324,6 @@ public class RegistrationActivity extends AppCompatActivity implements Constant,
                     cursor.close();
                     Bitmap photo = BitmapFactory.decodeFile(selectedPath);
                     profile_pic.setImageURI(selectedImageUri);
-                    Log.e("Path","Gallery??"+selectedPath);
 
                 } else if (requestCode == REQUEST_CODE_CAMERA && null != data) {
 
@@ -335,7 +331,6 @@ public class RegistrationActivity extends AppCompatActivity implements Constant,
                     selectedImageUri = Utilities.getImageUri(this, photo);
                     selectedPath = Utilities.getRealPathFromURI(this, selectedImageUri);
                     profile_pic.setImageURI(selectedImageUri);
-                    Log.e("Path","Camera??"+selectedPath);
 
                 } else {
                     Utilities.showSnackBar(this, coordinatorLayout,
@@ -427,7 +422,6 @@ public class RegistrationActivity extends AppCompatActivity implements Constant,
             } else {
                 Utilities.showSnackBar(RegistrationActivity.this, coordinatorLayout,
                         String.valueOf(logIn.getValue()));
-                Log.e("Response", "Response?? " + logIn.getValue());
             }
 
         } else {
@@ -440,7 +434,6 @@ public class RegistrationActivity extends AppCompatActivity implements Constant,
     @Override
     public void onFailure(Call<SignUpPOJO> call, Throwable t) {
         Utilities.dismissProgressDialog(this, progressBar);
-        Log.e("onFailure", "onFailure?? " + t.getMessage());
         Utilities.showSnackBar(RegistrationActivity.this, coordinatorLayout,
                 String.valueOf(getString(R.string.failed_to_connect_with_server)));
 

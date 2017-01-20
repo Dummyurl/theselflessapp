@@ -19,9 +19,6 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.Query;
 
-/**
- * Created by ourdesignz on 22/9/16.
- */
 public interface RestClient {
 
     @POST("login.php?")

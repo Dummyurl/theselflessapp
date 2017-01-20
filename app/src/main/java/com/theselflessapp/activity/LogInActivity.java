@@ -7,7 +7,6 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -25,16 +24,11 @@ import com.theselflessapp.modal.LogInPOJO;
 import com.theselflessapp.prefrence.Preference;
 import com.theselflessapp.utility.Utilities;
 
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-/**
- * Created by Sony on 10/9/2016.
- */
 
 public class LogInActivity extends AppCompatActivity implements Constant, View.OnClickListener,
         TextWatcher, Callback<LogInPOJO> {
@@ -81,7 +75,6 @@ public class LogInActivity extends AppCompatActivity implements Constant, View.O
         Preference obj = new Preference(this);
         if (obj != null) {
             token = obj.getData("token");
-            Log.e("Token", "Token??" + token);
         }
 
         /* Set Remember Me */
@@ -232,7 +225,6 @@ public class LogInActivity extends AppCompatActivity implements Constant, View.O
     @Override
     public void onFailure(Call<LogInPOJO> call, Throwable t) {
         Utilities.dismissProgressDialog(this, progressBar);
-        Log.e("onFailure", "onFailure?? " + t.getMessage());
         Utilities.showSnackBar(this, coordinatorLayout,
                 String.valueOf(getString(R.string.failed_to_connect_with_server)));
     }

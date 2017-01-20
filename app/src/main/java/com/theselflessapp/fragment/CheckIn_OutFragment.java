@@ -130,8 +130,6 @@ public class CheckIn_OutFragment extends Fragment implements Constant, View.OnCl
 
                 if (MyService.getInstance().getLocation() != null) {
 
-                    Log.e("Lat", "Lat??" + MyService.getInstance().getFusedLatitude());
-                    Log.e("Long", "Long??" + MyService.getInstance().getFusedLongitude());
                     // For dropping a marker at a point on the Map
                     LatLng sydney = new LatLng(MyService.getInstance().getFusedLatitude(), MyService.getInstance().getFusedLongitude());
                     googleMap.addMarker(new MarkerOptions().position(sydney));
@@ -273,7 +271,6 @@ public class CheckIn_OutFragment extends Fragment implements Constant, View.OnCl
     @Override
     public void onFailure(Call<CheckInCheckOutPOJO> call, Throwable t) {
         Utilities.dismissProgressDialog(getActivity(), progressBar);
-        Log.e("onFailure", "onFailure?? " + t.getMessage());
         Utilities.showSnackBar(getActivity(), HomeActivity.getInstance().getCoordinateLayout(),
                 String.valueOf(getString(R.string.failed_to_connect_with_server)));
 

@@ -56,10 +56,6 @@ import java.util.regex.Pattern;
 import okhttp3.RequestBody;
 import okio.Buffer;
 
-/**
- * Created by Sony on 10/8/2016.
- */
-
 public class Utilities implements Constant {
 
 
@@ -189,7 +185,6 @@ public class Utilities implements Constant {
                 .setAction(ctx.getString(R.string.retry), new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Log.e("Retry", "Retry");
                     }
                 });
 

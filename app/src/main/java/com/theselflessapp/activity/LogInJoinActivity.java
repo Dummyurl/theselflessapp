@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,10 +13,6 @@ import com.theselflessapp.interfaces.Constant;
 import com.theselflessapp.services.MyService;
 import com.theselflessapp.utility.Utilities;
 
-
-/**
- * Created by Sony on 10/8/2016.
- */
 
 public class LogInJoinActivity extends AppCompatActivity implements Constant, View.OnClickListener {
     private Button btn_register;

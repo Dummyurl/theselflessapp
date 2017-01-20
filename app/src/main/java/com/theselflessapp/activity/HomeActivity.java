@@ -35,10 +35,6 @@ import com.theselflessapp.utility.Utilities;
 import com.theselflessapp.view.MaterialRippleLayout;
 
 
-/**
- * Created by Sony on 10/9/2016.
- */
-
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener, Constant,
         FragmentDrawer.FragmentDrawerListener {
 

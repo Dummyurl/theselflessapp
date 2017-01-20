@@ -10,10 +10,6 @@ import android.view.View;
 import com.theselflessapp.R;
 
 
-/**
- * Created by ourdesignz on 4/10/16.
- */
-
 public class SimpleDividerItemDecoration extends RecyclerView.ItemDecoration {
     private Drawable mDivider;
 

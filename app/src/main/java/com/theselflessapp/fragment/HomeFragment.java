@@ -328,7 +328,6 @@ public class HomeFragment extends Fragment implements Constant,
     @Override
     public void onFailure(Call<RecentCheckInPOJO> call, Throwable t) {
         Utilities.dismissProgressDialog(getActivity(), progressBar);
-        Log.e("onFailure", "onFailure?? " + t.getMessage());
         recyclerView.setVisibility(View.GONE);
         text_snap_message.setVisibility(View.VISIBLE);
         Utilities.showSnackBar(getActivity(), HomeActivity.getInstance().getCoordinateLayout(),

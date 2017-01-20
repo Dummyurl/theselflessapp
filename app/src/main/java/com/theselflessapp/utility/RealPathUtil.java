@@ -8,9 +8,6 @@ import android.net.Uri;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
-/**
- * Created by ourdesignz on 24/10/16.
- */
 
 public class RealPathUtil {
     @SuppressLint("NewApi")

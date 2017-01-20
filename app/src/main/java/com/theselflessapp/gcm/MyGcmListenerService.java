@@ -41,7 +41,6 @@ public class MyGcmListenerService extends GcmListenerService {
     public void onMessageReceived(String from, Bundle data) {
 
         message = data.getString("alert");
-        Log.e("notification message", "" + message);
         sendNotification(message);
 
     }

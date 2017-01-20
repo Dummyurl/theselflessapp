@@ -123,8 +123,6 @@ public class EditProfileFragment extends Fragment implements Constant, View.OnCl
         profile_pic = (SimpleDraweeView) rootView.findViewById(R.id.profile_pic);
         profile_pic.setOnClickListener(this);
 
-        Log.e("User", "Id??" + Preference.getUserId(getActivity()));
-
         /* Load Spinner Items Method */
         loadSpinnerItems();
 
@@ -366,7 +364,6 @@ public class EditProfileFragment extends Fragment implements Constant, View.OnCl
                     cursor.close();
                     Bitmap photo = BitmapFactory.decodeFile(selectedPath);
                     profile_pic.setImageURI(selectedImageUri);
-                    Log.e("Path", "Gallery??" + selectedPath);
 
                 } else if (requestCode == REQUEST_CODE_CAMERA && null != data) {
 
@@ -374,7 +371,6 @@ public class EditProfileFragment extends Fragment implements Constant, View.OnCl
                     selectedImageUri = Utilities.getImageUri(getActivity(), photo);
                     selectedPath = Utilities.getRealPathFromURI(getActivity(), selectedImageUri);
                     profile_pic.setImageURI(selectedImageUri);
-                    Log.e("Path", "Camera??" + selectedPath);
 
                 } else {
                     Utilities.showSnackBar(getActivity(), HomeActivity.getInstance().getCoordinateLayout(),
@@ -441,7 +437,6 @@ public class EditProfileFragment extends Fragment implements Constant, View.OnCl
                     Utilities.dismissProgressDialog(getActivity(), progressBar);
 
                     if (getData.getSuccess() == SUCCESS) {
-                        Log.e("Response", "Response?? " + getData.getSuccess());
 
                         if (getData.getMessage().get(0).getUsername() != null &&
                                 !getData.getMessage().get(0).getUsername().equals("")) {
@@ -487,7 +482,6 @@ public class EditProfileFragment extends Fragment implements Constant, View.OnCl
                     } else {
 
                         Utilities.dismissProgressDialog(getActivity(), progressBar);
-                        Log.e("Response", "Response?? " + getData.getSuccess());
                     }
 
                 } else {
@@ -500,7 +494,6 @@ public class EditProfileFragment extends Fragment implements Constant, View.OnCl
             @Override
             public void onFailure(Call<GetUserDataPOJO> call, Throwable t) {
                 Utilities.dismissProgressDialog(getActivity(), progressBar);
-                Log.e("onFailure", "onFailure?? " + t.getMessage());
                 Utilities.showSnackBar(getActivity(), HomeActivity.getInstance().getCoordinateLayout(),
                         String.valueOf(getString(R.string.failed_to_connect_with_server)));
 
@@ -596,26 +589,22 @@ public class EditProfileFragment extends Fragment implements Constant, View.OnCl
                         HomeActivity.getInstance().getCoordinateLayout(),
                         String.valueOf(getString(R.string.save_profile)));
 
-                Log.e("Response", "Response?? " + editProfilePOJO.getMessage());
 
             } else {
                 Utilities.showSnackBar(getActivity(),
                         HomeActivity.getInstance().getCoordinateLayout(),
                         String.valueOf(editProfilePOJO.getMessage()));
-                Log.e("Response", "Response?? " + editProfilePOJO.getMessage());
             }
 
         } else {
 
             Utilities.dismissProgressDialog(getActivity(), progressBar);
-            Log.e("ResponseD", "ResponseD?? " + editProfilePOJO.getMessage());
         }
     }
 
     @Override
     public void onFailure(Call<EditProfilePOJO> call, Throwable t) {
         Utilities.dismissProgressDialog(getActivity(), progressBar);
-        Log.e("onFailure", "onFailure?? " + t.getMessage());
         Utilities.showSnackBar(getActivity(), HomeActivity.getInstance().getCoordinateLayout(),
                 String.valueOf(getString(R.string.failed_to_connect_with_server)));
 

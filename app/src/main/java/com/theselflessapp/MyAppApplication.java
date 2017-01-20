@@ -4,9 +4,6 @@ import android.app.Application;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 
-/**
- * Created by ourdesignz on 4/10/16.
- */
 public class MyAppApplication extends Application {
 
     private static MyAppApplication sInstance;

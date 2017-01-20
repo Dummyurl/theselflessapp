@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
@@ -20,16 +19,11 @@ import com.theselflessapp.interfaces.RestClient;
 import com.theselflessapp.modal.GetUserDataPOJO;
 import com.theselflessapp.utility.Utilities;
 
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-/**
- * Created by ourdesignz on 13/10/16.
- */
 
 public class RecentMemoryGivenActivity extends AppCompatActivity implements Constant,
         View.OnClickListener, Callback<GetUserDataPOJO> {
@@ -162,7 +156,6 @@ public class RecentMemoryGivenActivity extends AppCompatActivity implements Cons
             Utilities.dismissProgressDialog(RecentMemoryGivenActivity.this, progressBar);
 
             if (getData.getSuccess() == SUCCESS) {
-                Log.e("Response", "Response?? " + getData.getSuccess());
 
                 if (getData.getMessage().get(0).getUsername() != null &&
                         !getData.getMessage().get(0).getUsername().equals("")) {
@@ -203,7 +196,6 @@ public class RecentMemoryGivenActivity extends AppCompatActivity implements Cons
             } else {
 
                 Utilities.dismissProgressDialog(RecentMemoryGivenActivity.this, progressBar);
-                Log.e("Response", "Response?? " + getData.getSuccess());
             }
 
         } else {
@@ -216,7 +208,6 @@ public class RecentMemoryGivenActivity extends AppCompatActivity implements Cons
     @Override
     public void onFailure(Call<GetUserDataPOJO> call, Throwable t) {
         Utilities.dismissProgressDialog(RecentMemoryGivenActivity.this, progressBar);
-        Log.e("onFailure", "onFailure?? " + t.getMessage());
         Utilities.showSnackBar(RecentMemoryGivenActivity.this, HomeActivity.getInstance().getCoordinateLayout(),
                 String.valueOf(getString(R.string.failed_to_connect_with_server)));
     }

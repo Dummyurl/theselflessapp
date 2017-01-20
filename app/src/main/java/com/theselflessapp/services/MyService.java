@@ -16,10 +16,6 @@ import com.google.android.gms.location.LocationServices;
 import com.theselflessapp.interfaces.Constant;
 
 
-/**
- * Created by ourdesignz on 18/10/16.
- */
-
 public class MyService extends Service implements LocationListener, Constant {
     // Google client to interact with Google API
     private GoogleApiClient mGoogleApiClient;

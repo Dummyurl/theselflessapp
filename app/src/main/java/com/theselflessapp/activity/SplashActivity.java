@@ -99,7 +99,6 @@ public class SplashActivity extends ActivityManagePermission implements Constant
                             PreferenceManager.getDefaultSharedPreferences(context);
                     boolean sentToken = sharedPreferences
                             .getBoolean(QuickstartPreferences.SENT_TOKEN_TO_SERVER, false);
-                    Log.e("Token", "Token?? " + sentToken);
                 }
             };
 
@@ -207,16 +206,15 @@ public class SplashActivity extends ActivityManagePermission implements Constant
         int code = response.code();
         if (code == RESPONSE_CODE) {
             if (remove.getSuccess() == SUCCESS) {
-                Log.e("Success", "true??" + remove.getSuccess());
+                Log.i("Success", "true??" + remove.getSuccess());
             } else {
-                Log.e("Success", "false??" + remove.getSuccess());
+                Log.i("Success", "false??" + remove.getSuccess());
             }
         }
     }
 
     @Override
     public void onFailure(Call<RemoveSnapMemoryPOJO> call, Throwable t) {
-        Log.e("onFailure", "onFailure?? " + t.getMessage());
         Utilities.showSnackBar(this, coordinatorLayout,
                 String.valueOf(getString(R.string.failed_to_connect_with_server)));
 
@@ -252,7 +250,7 @@ public class SplashActivity extends ActivityManagePermission implements Constant
                 apiAvailability.getErrorDialog(this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
                         .show();
             } else {
-                Log.e("Splash", "This device is not supported.");
+                Log.i("Splash", "This device is not supported.");
                 finish();
             }
             return false;

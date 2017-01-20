@@ -12,9 +12,6 @@ import com.theselflessapp.R;
 import com.theselflessapp.interfaces.Constant;
 import com.theselflessapp.utility.Utilities;
 
-/**
- * Created by ourdesignz on 13/10/16.
- */
 
 public class AboutAppActivity extends AppCompatActivity implements Constant, View.OnClickListener {
     private CoordinatorLayout coordinatorLayout;

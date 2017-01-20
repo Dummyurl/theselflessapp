@@ -165,7 +165,6 @@ public class SnapAMemoryFragment extends Fragment implements Constant, View.OnCl
                 selectedImageUri = Utilities.getImageUri(getActivity(), photo);
                 selectedPath = Utilities.getRealPathFromURI(getActivity(), selectedImageUri);
                 img_snap_memory.setImageURI(selectedImageUri);
-                Log.e("Path", "Camera??" + selectedPath);
 
             } else {
 //                text_snap_message.setVisibility(View.VISIBLE);
@@ -195,7 +194,6 @@ public class SnapAMemoryFragment extends Fragment implements Constant, View.OnCl
                 Bitmap photo = BitmapFactory.decodeFile(selectedPath);
                 img_snap_memory.setImageURI(selectedImageUri);
 
-                Log.e("Path", "Gallery??" + selectedPath);
 
             } else {
 //                text_snap_message.setVisibility(View.VISIBLE);
@@ -351,7 +349,6 @@ public class SnapAMemoryFragment extends Fragment implements Constant, View.OnCl
     @Override
     public void onFailure(Call<SnapAMemoryPOJO> call, Throwable t) {
         Utilities.dismissProgressDialog(getActivity(), progressBar);
-        Log.e("onFailure", "onFailure?? " + t.getMessage());
         Utilities.showSnackBar(getActivity(), HomeActivity.getInstance().getCoordinateLayout(),
                 String.valueOf(getString(R.string.failed_to_connect_with_server)));
 

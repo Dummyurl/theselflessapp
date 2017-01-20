@@ -10,10 +10,6 @@ import android.view.ViewGroup;
 import com.theselflessapp.R;
 import com.theselflessapp.interfaces.Constant;
 
-/**
- * Created by ourdesignz on 20/10/16.
- */
-
 public class HelpContactFragment extends Fragment implements Constant {
 
     @Override

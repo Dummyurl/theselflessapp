@@ -10,9 +10,6 @@ import com.theselflessapp.interfaces.Constant;
 import com.theselflessapp.modal.LogInPOJO;
 
 
-/**
- * Created by ourdesignz on 22/9/16.
- */
 public class Preference implements Constant {
 
     static SharedPreferences sharedpreferences;
