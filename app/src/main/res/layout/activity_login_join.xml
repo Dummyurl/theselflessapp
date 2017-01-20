@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_black_cryan"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_height="250dp">
+
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/self_logo_transparent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_snap_memory_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_below="@+id/img_logo"
+                android:layout_marginBottom="50dp"
+                android:text="@string/snap_memory"
+                android:textColor="@color/md_white_1000"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <com.theselflessapp.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rippleColor="@color/material_grey_300"
+                tools:ignore="PrivateResource">
+
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:drawableLeft="@drawable/unlock_52"
+                    android:text="@string/already_register_login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded" />
+
+            </com.theselflessapp.view.MaterialRippleLayout>
+
+
+            <com.theselflessapp.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:rippleColor="@color/material_grey_300"
+                tools:ignore="PrivateResource">
+
+                <Button
+                    android:id="@+id/btn_sign_up_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_button_gray"
+                    android:drawableLeft="@drawable/message_filled_52"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded" />
+
+            </com.theselflessapp.view.MaterialRippleLayout>
+
+
+            <com.theselflessapp.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:rippleColor="@color/material_grey_300"
+                tools:ignore="PrivateResource">
+
+                <Button
+                    android:id="@+id/btn_about_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_button_gray"
+                    android:drawableLeft="@drawable/about_filled_52"
+                    android:text="@string/about_the_app"
+                    android:textAllCaps="false"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="18sp"
+                    tools:ignore="RtlHardcoded" />
+            </com.theselflessapp.view.MaterialRippleLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

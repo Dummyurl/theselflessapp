@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="?attr/colorAccent"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+
+    <com.theselflessapp.view.MaterialRippleLayout
+        android:id="@+id/ripple_location"
+        style="@style/RippleStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:rippleColor="@color/material_grey_300">
+
+        <ImageButton
+            android:id="@+id/btn_location"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/location_icon_dark" />
+
+    </com.theselflessapp.view.MaterialRippleLayout>
+
+
+    <com.theselflessapp.view.MaterialRippleLayout
+        android:id="@+id/ripple_camera"
+        style="@style/RippleStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:rippleColor="@color/material_grey_300">
+
+        <ImageButton
+            android:id="@+id/btn_camera"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/camera_icon_dark" />
+    </com.theselflessapp.view.MaterialRippleLayout>
+
+
+    <com.theselflessapp.view.MaterialRippleLayout
+        android:id="@+id/ripple_home"
+        style="@style/RippleStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:rippleColor="@color/material_grey_300">
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/home_icon_dark" />
+
+    </com.theselflessapp.view.MaterialRippleLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
